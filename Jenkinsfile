@@ -5,11 +5,11 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'DockerHub-mosazhaw', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    withCredentials([usernamePassword(credentialsId: 'DockerHub-kadi1996-DevOps', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
-                            export DOCKER_HOST=tcp://host.docker.internal:2375
+                            export DOCKER_HOST=tcp://localhost:2375
                             docker login -u $USERNAME -p $PASSWORD
-                            docker push mosazhaw/node-web-app
+                            docker push kadi1996/node-web-app
                         '''
                     }
                 }
