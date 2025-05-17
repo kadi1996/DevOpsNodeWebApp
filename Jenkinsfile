@@ -10,7 +10,7 @@ pipeline {
                             export DOCKER_HOST=tcp://localhost:2375
                             export PATH=$PATH:/usr/local/bin
                             docker login -u $USERNAME -p $PASSWORD
-                            docker push kadi1996/node-web-app
+                            docker push kadi96/node-web-app
                         '''
                     }
                 }
